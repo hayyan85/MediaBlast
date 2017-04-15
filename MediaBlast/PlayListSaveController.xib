@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayListSaveController">
+            <connections>
+                <outlet property="ButtonBack" destination="0bf-eN-SFy" id="AfF-ju-qgi"/>
+                <outlet property="ButtonSave" destination="BYY-9c-k1U" id="DRz-0P-Jpq"/>
+                <outlet property="TextPlayListName" destination="LPM-0l-QaX" id="sck-bb-BSJ"/>
+                <outlet property="tableView" destination="A0v-2V-oK7" id="xrb-6V-9zZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to call this playlist ?" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8H-1y-YN1">
+                    <rect key="frame" x="38" y="70" width="244" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYY-9c-k1U">
+                    <rect key="frame" x="38" y="144" width="75" height="28"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                    <state key="normal" title="Save ">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="SavePlayList" destination="-1" eventType="touchUpInside" id="w88-TE-UD1"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="A0v-2V-oK7">
+                    <rect key="frame" x="0.0" y="220" width="320" height="348"/>
+                    <color key="backgroundColor" red="0.31372549020000001" green="0.38431372549999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save Playlist ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGf-lD-4Og">
+                    <rect key="frame" x="38" y="24" width="112" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LPM-0l-QaX">
+                    <rect key="frame" x="38" y="99" width="244" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bf-eN-SFy">
+                    <rect key="frame" x="207" y="144" width="75" height="28"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" red="0.09414220679926999" green="0.17653554664474891" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="contentEdgeInsets" minX="20" minY="5" maxX="20" maxY="5"/>
+                    <state key="normal" title="Back">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="GoBack" destination="-1" eventType="touchUpInside" id="hXA-Xc-68l"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="0bf-eN-SFy" secondAttribute="trailing" constant="42" id="2iK-XO-65a"/>
+                <constraint firstItem="BYY-9c-k1U" firstAttribute="width" secondItem="0bf-eN-SFy" secondAttribute="width" id="4en-nE-Div"/>
+                <constraint firstItem="BYY-9c-k1U" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="38" id="64W-o4-Xo5"/>
+                <constraint firstItem="e8H-1y-YN1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="38" id="AOr-kI-Xec"/>
+                <constraint firstAttribute="bottom" secondItem="A0v-2V-oK7" secondAttribute="bottom" id="Dot-vv-Dwb"/>
+                <constraint firstItem="LPM-0l-QaX" firstAttribute="centerX" secondItem="e8H-1y-YN1" secondAttribute="centerX" id="LPg-5G-ZUb"/>
+                <constraint firstItem="A0v-2V-oK7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LWA-6y-SyA"/>
+                <constraint firstItem="FGf-lD-4Og" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="38" id="MiC-J6-48g"/>
+                <constraint firstItem="LPM-0l-QaX" firstAttribute="top" secondItem="e8H-1y-YN1" secondAttribute="bottom" constant="13" id="N1E-9F-U5Y"/>
+                <constraint firstItem="e8H-1y-YN1" firstAttribute="top" secondItem="FGf-lD-4Og" secondAttribute="bottom" constant="25" id="QGZ-yY-bEe"/>
+                <constraint firstItem="0bf-eN-SFy" firstAttribute="width" secondItem="BYY-9c-k1U" secondAttribute="width" constant="-44" id="QJ3-vZ-Q8g"/>
+                <constraint firstItem="0bf-eN-SFy" firstAttribute="leading" secondItem="BYY-9c-k1U" secondAttribute="trailing" constant="90" id="S1B-R5-9Cb"/>
+                <constraint firstAttribute="trailing" secondItem="A0v-2V-oK7" secondAttribute="trailing" id="VgM-LG-Zsb"/>
+                <constraint firstItem="A0v-2V-oK7" firstAttribute="top" secondItem="BYY-9c-k1U" secondAttribute="bottom" constant="48" id="VoF-6X-W2X"/>
+                <constraint firstItem="BYY-9c-k1U" firstAttribute="height" secondItem="0bf-eN-SFy" secondAttribute="height" id="Xma-g7-sGv"/>
+                <constraint firstItem="BYY-9c-k1U" firstAttribute="top" secondItem="LPM-0l-QaX" secondAttribute="bottom" constant="15" id="Yzr-rA-4xq"/>
+                <constraint firstItem="0bf-eN-SFy" firstAttribute="width" secondItem="BYY-9c-k1U" secondAttribute="width" id="g5x-EE-3w2"/>
+                <constraint firstItem="0bf-eN-SFy" firstAttribute="top" secondItem="LPM-0l-QaX" secondAttribute="bottom" constant="15" id="hb8-og-gAE"/>
+                <constraint firstItem="FGf-lD-4Og" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="24" id="jTe-Xi-o6F"/>
+                <constraint firstItem="BYY-9c-k1U" firstAttribute="width" secondItem="0bf-eN-SFy" secondAttribute="width" id="rk7-Tn-cL2"/>
+                <constraint firstItem="LPM-0l-QaX" firstAttribute="width" secondItem="e8H-1y-YN1" secondAttribute="width" id="uUi-9I-U8i"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="QJ3-vZ-Q8g"/>
+                    <exclude reference="g5x-EE-3w2"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="289" y="160"/>
+        </view>
+    </objects>
+</document>

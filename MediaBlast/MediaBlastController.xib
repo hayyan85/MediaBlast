@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MediaBlastController">
+            <connections>
+                <outlet property="buttonFlatMediaPlayer" destination="kq4-Zj-Exh" id="k5A-e6-74V"/>
+                <outlet property="buttonImportMusic" destination="Qee-Uc-uvz" id="qOc-oz-NKk"/>
+                <outlet property="buttonPlayList" destination="zKp-8P-md7" id="m8Z-UE-MHH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="D6O-0Y-ap6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFu-OY-C2A">
+                    <rect key="frame" x="110" y="100" width="100" height="100"/>
+                    <state key="normal" image="TitleMediaPlayer.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOT-ib-zMU">
+                    <rect key="frame" x="50" y="250" width="220" height="179"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qee-Uc-uvz" customClass="FlatButton">
+                            <rect key="frame" x="42" y="151" width="136" height="28"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                            <state key="normal" title="File Transfer">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="ImportMediaManager:" destination="-1" eventType="touchUpInside" id="rwg-EL-6sZ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kq4-Zj-Exh" customClass="FlatButton">
+                            <rect key="frame" x="42" y="0.0" width="136" height="28"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                            <state key="normal" title="Media Player">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="DisplayMediaManager:" destination="-1" eventType="touchUpInside" id="g4U-h7-6iz"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKp-8P-md7" customClass="FlatButton">
+                            <rect key="frame" x="42" y="76" width="136" height="28"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                            <state key="normal" title="Manage Playlists">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="PlayListManager:" destination="-1" eventType="touchUpInside" id="8CF-f3-I9D"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.31372549020000001" green="0.38431372549999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="kq4-Zj-Exh" secondAttribute="centerX" id="1Wd-Zt-TMB"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="280" constant="150" id="4tt-4b-OHQ"/>
+                        <constraint firstAttribute="centerY" secondItem="zKp-8P-md7" secondAttribute="centerY" id="7Pg-Ju-JZM"/>
+                        <constraint firstAttribute="centerX" secondItem="zKp-8P-md7" secondAttribute="centerX" id="9G5-yB-G4B"/>
+                        <constraint firstAttribute="height" priority="260" constant="179" id="9YV-oY-C4F"/>
+                        <constraint firstAttribute="bottom" secondItem="Qee-Uc-uvz" secondAttribute="bottom" id="AtI-AW-yRS"/>
+                        <constraint firstAttribute="height" constant="147" id="Lvg-br-EUw"/>
+                        <constraint firstAttribute="centerX" secondItem="Qee-Uc-uvz" secondAttribute="centerX" id="MXR-k8-qOB"/>
+                        <constraint firstItem="zKp-8P-md7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kq4-Zj-Exh" secondAttribute="bottom" priority="280" constant="20" id="Os3-gs-YKS"/>
+                        <constraint firstItem="zKp-8P-md7" firstAttribute="height" secondItem="Qee-Uc-uvz" secondAttribute="height" id="QIy-tS-8gJ"/>
+                        <constraint firstItem="Qee-Uc-uvz" firstAttribute="top" secondItem="zKp-8P-md7" secondAttribute="bottom" priority="260" constant="47" id="XS1-6g-rfH"/>
+                        <constraint firstItem="zKp-8P-md7" firstAttribute="height" secondItem="kq4-Zj-Exh" secondAttribute="height" id="fZJ-v4-fgk"/>
+                        <constraint firstItem="zKp-8P-md7" firstAttribute="width" secondItem="Qee-Uc-uvz" secondAttribute="width" id="ffb-oM-Ekc"/>
+                        <constraint firstItem="Qee-Uc-uvz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zKp-8P-md7" secondAttribute="bottom" priority="280" constant="20" id="tZl-tX-IT4"/>
+                        <constraint firstItem="kq4-Zj-Exh" firstAttribute="top" secondItem="iOT-ib-zMU" secondAttribute="top" id="wce-yg-gIg"/>
+                        <constraint firstItem="zKp-8P-md7" firstAttribute="width" secondItem="kq4-Zj-Exh" secondAttribute="width" id="y3U-PG-IuZ"/>
+                        <constraint firstItem="zKp-8P-md7" firstAttribute="top" secondItem="kq4-Zj-Exh" secondAttribute="bottom" priority="260" constant="48" id="yUc-KQ-UeQ"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Lvg-br-EUw"/>
+                        </mask>
+                    </variation>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Media Blaster" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYq-8W-rZg">
+                    <rect key="frame" x="109" y="30" width="103" height="20"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.31372549020000001" green="0.38431372549999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="iOT-ib-zMU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dFu-OY-C2A" secondAttribute="bottom" priority="290" constant="15" id="42D-yf-am1"/>
+                <constraint firstItem="kYq-8W-rZg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="5mo-kv-Ayz"/>
+                <constraint firstItem="iOT-ib-zMU" firstAttribute="top" secondItem="dFu-OY-C2A" secondAttribute="bottom" priority="260" constant="50" id="8AJ-he-QIU"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="iOT-ib-zMU" secondAttribute="bottom" priority="290" constant="30" id="G4s-YB-OgV"/>
+                <constraint firstItem="dFu-OY-C2A" firstAttribute="top" secondItem="kYq-8W-rZg" secondAttribute="bottom" priority="260" constant="50" id="JJf-cf-8aN"/>
+                <constraint firstItem="iOT-ib-zMU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="OTv-zb-HAL"/>
+                <constraint firstAttribute="centerX" secondItem="dFu-OY-C2A" secondAttribute="centerX" id="S5d-4Z-B2E"/>
+                <constraint firstAttribute="centerX" secondItem="kYq-8W-rZg" secondAttribute="centerX" id="T7H-OB-rzO"/>
+                <constraint firstAttribute="trailing" secondItem="iOT-ib-zMU" secondAttribute="trailing" constant="50" id="Tl6-Lb-yai"/>
+                <constraint firstItem="dFu-OY-C2A" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kYq-8W-rZg" secondAttribute="bottom" priority="290" constant="15" id="w1T-Kv-E0g"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="-418" y="354"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="TitleMediaPlayer.png" width="100" height="100"/>
+    </resources>
+</document>
